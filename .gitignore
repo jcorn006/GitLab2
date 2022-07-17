@@ -22,7 +22,7 @@
 #Added to Ignore
 *.project
 *.classpath
-*.vscode/
+*.vscode
 *.class
 *.jar
 
