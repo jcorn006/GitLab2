@@ -19,7 +19,7 @@ public class IntervalTest {
     @Test
     void testGetMax() {
         Interval intervalTest = new Interval(23.0, 30.0);
-
+        // Check that max is correct
         assertEquals(30.0, intervalTest.getMax());
         assertNotEquals(25.0, intervalTest.getMax());
 
