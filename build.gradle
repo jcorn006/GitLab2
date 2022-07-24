@@ -42,8 +42,7 @@ task reportsAndStuff(dependsOn:[
     description = "Generate reports and stuff"
 }
 
-task copyReports(type: Copy)
-{
+task copyReports(type: Copy){
     dependsOn reportsAndStuff
     from 'build/reports'
     into 'build/tmp/website'
@@ -51,15 +50,13 @@ task copyReports(type: Copy)
     
 }
 
-task copyDocumentation(type: Copy)
-{
+task copyDocumentation(type: Copy){
     dependsOn reportsAndStuff
     from 'build/docs'
     into 'build/tmp/website'
     description = "Copy Javadoc output to \"website\" directory."
 }
 
-task deployReports (dependsOn: ["copyReports", "copyDocumentation"])
-{
+task deployReports (dependsOn: ["copyReports", "copyDocumentation"]){
     description = "Copy all reports and documentation to \"website\" directory."
 }
